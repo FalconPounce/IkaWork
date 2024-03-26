@@ -6,7 +6,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-
+Keeper = ['ikamulti-1@yahoo.com','Ikamulti1234!'],['ikamulti-2@yahoo.com','Ikamulti1234!'],['ikamulti-3@yahoo.com','Ikamulti1234!'],['ikamulti-4@yahoo.com','Ikamulti1234!'],['ikamulti-5@yahoo.com','Ikamulti1234!'],['ikamulti-6@yahoo.com','Ikamulti1234!'],['ikamulti-7@yahoo.com','Ikamulti1234!'],['ikamulti-8@yahoo.com','Ikamulti1234!'],['ikamulti-9@yahoo.com','Ikamulti1234!'],['ikamulti-10@yahoo.com','Ikamulti1234!'],['ikamulti-11@yahoo.com','Ikamulti1234!']
 spieler = ['royaltroll@gmx.de','noah1998']
 Landeinheiten = {'Hoplit' : '303', 'Dampfgigant' : '308', 'Speerträger' : '315', 'Schwertkämpfer' : '302', 'Steinschleuderer' : '301', 'Bogenschütze' : '313', 'Scwefelbüchsen' : '304', 'Rammbock' : '307', 'Katapult' : '306', 'Mörser' : '305', 'Gyrokopter' : '312', 'Ballon' : '309', 'Koch' : '310', 'Arzt' : '311'}
 Kriegsschiffe = {'Feuer' : '211', 'Dampf' : '216', 'Ramm' : '210', 'Ballista' : '213', 'Katapult' : '214', 'Mörser' : '215', 'Raketen' : '217', 'Tauch' : '212', 'Schaufel' : '218', 'Ballon' : '219', 'Tender' : '220'}
@@ -19,7 +19,7 @@ def einloggen(spieler,driver):
     time.sleep(1)
 
     try:
-        element = WebDriverWait(driver, 5).until(
+        element = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.XPATH,
                 '//*[@id="loginRegisterTabs"]'
                 )))
@@ -42,21 +42,21 @@ def einloggen(spieler,driver):
         
 #switch von regestrieren auf einloggen
         
-        einloggentab = driver.find_element_by_xpath(
+        einloggentab = driver.find_element("xpath",
             '//*[@id="loginRegisterTabs"]/ul[1]/li[1]'
             )
         
         einloggentab.click()
 
     email = spieler[0]
-    emailslot = driver.find_element_by_xpath(
+    emailslot = driver.find_element("xpath",
         '//*[@id="loginForm"]/div[2]/div[1]/input[1]'
         )
     
     emailslot.send_keys(email)
     
     passwort = spieler[1]
-    passwortslot = driver.find_element_by_xpath(
+    passwortslot = driver.find_element("xpath",
         '//*[@id="loginForm"]/div[3]/div[1]/input[1]'
         )
     

@@ -7,7 +7,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 
-Keeper = [['nymphe.akira@web.de','Nympheyxcv1'],['knoane.akira@web.de','Knoaneyxcv1'],['integer.akira@web.de','Integeryxcv1'],['ereboss.akira@web.de','Erebossyxcv1'],['quinte.akira@web.de','Quinteyxcv1'],['draft.akira@web.de','Draftyxcv1'],['watsumi.akira@web.de','Watsumiyxcv1'],['ubermensch.akira@web.de','Ubermenschyxcv1'],['induktion.akira@web.de','Induktionyxcv1'],['anduin.akira@web.de','Anduinyxcv1'],['poseidon.akira@web.de','Poseidonyxcv1']]
+Keeper = ['ikamulti-1@yahoo.com','Ikamulti1234!'],['ikamulti-2@yahoo.com','Ikamulti1234!'],['ikamulti-3@yahoo.com','Ikamulti1234!'],['ikamulti-4@yahoo.com','Ikamulti1234!'],['ikamulti-5@yahoo.com','Ikamulti1234!'],['ikamulti-6@yahoo.com','Ikamulti1234!'],['ikamulti-7@yahoo.com','Ikamulti1234!'],['ikamulti-8@yahoo.com','Ikamulti1234!'],['ikamulti-9@yahoo.com','Ikamulti1234!'],['ikamulti-10@yahoo.com','Ikamulti1234!'],['ikamulti-11@yahoo.com','Ikamulti1234!']
 #Hades1 = [['hades82-akira1@yahoo.com','Akirayxcv1'],['hades82-akira2@yahoo.com','Akirayxcv2'],['hades82-akira3@yahoo.com','Akirayxcv3'],['hades82-akira4@yahoo.com','Akirayxcv4'],['hades82-akira5@yahoo.com','Akirayxcv5'],['hades82-akira6@yahoo.com','Akirayxcv6'],['hades82-akira7@yahoo.com','Akirayxcv7'],['hades82-akira8@yahoo.com','Akirayxcv8'],['hades82-akira9@yahoo.com','Akirayxcv9'],['hades82-akira10@yahoo.com','Akirayxcv10'],['hades82-akira11@yahoo.com','Akirayxcv11']]
 Landeinheiten = {'Hoplit' : '303', 'Dampfgigant' : '308', 'Speerträger' : '315', 'Schwertkämpfer' : '302', 'Steinschleuderer' : '301', 'Bogenschütze' : '313', 'Scwefelbüchsen' : '304', 'Rammbock' : '307', 'Katapult' : '306', 'Mörser' : '305', 'Gyrokopter' : '312', 'Ballon' : '309', 'Koch' : '310', 'Arzt' : '311'}
 Kriegsschiffe = {'Feuer' : '211', 'Dampf' : '216', 'Ramm' : '210', 'Ballista' : '213', 'Katapult' : '214', 'Mörser' : '215', 'Raketen' : '217', 'Tauch' : '212', 'Schaufel' : '218', 'Ballon' : '219', 'Tender' : '220'}
@@ -1047,4 +1047,10 @@ def Gebäudestufe(driver):
 
 
 
+def einloggen3(spieler,driver):
+    
+    driver.execute_script("window.open('https://lobby.ikariam.gameforge.com/de_DE/')")
+    driver.switch_to.window(driver.window_handles[-1])
+    time.sleep(3)
+    
     
